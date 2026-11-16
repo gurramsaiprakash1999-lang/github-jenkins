@@ -3,85 +3,240 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TasteFest 2026 - Street Food Festival</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Taste of the City | Annual Food Festival</title>
+  <style>
+    /* Basic Reset & Typography */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #fffaf5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Navigation */
+    header {
+      background-color: #d9381e;
+      color: white;
+      padding: 1rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                  url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+      height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+      max-width: 600px;
+    }
+
+    .btn {
+      background-color: #f39c12;
+      color: white;
+      padding: 12px 28px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #e67e22;
+    }
+
+    /* Container & Sections */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+      color: #d9381e;
+    }
+
+    /* Food Vendors Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #fdebd0;
+      color: #d35400;
+      padding: 4px 10px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    /* Event Info Box */
+    .info-banner {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .info-details {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      font-size: 1.1rem;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #1a252f;
+      color: #bbb;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Navigation -->
-  <header class="navbar">
-    <div class="logo">TasteFest</div>
+  <!-- Header -->
+  <header>
+    <div class="logo">🌮 TASTE FEST</div>
     <nav>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#vendors">Food Stalls</a></li>
-        <li><a href="#schedule">Schedule</a></li>
-        <li><a href="#tickets" class="btn-small">Get Tickets</a></li>
-      </ul>
+      <a href="#vendors">Vendors</a>
+      <a href="#details">Details</a>
+      <a href="#tickets">Tickets</a>
     </nav>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-content">
-      <h1>City Street Food Festival</h1>
-      <p>Over 40 local food trucks, live music, and craft drinks. November 28–29 at Central Park.</p>
-      <a href="#tickets" class="btn-primary">Reserve Free Entry</a>
-    </div>
+    <h1>Annual Street Food Festival</h1>
+    <p>Over 50 local food trucks, live music, craft drinks, and sweet treats all in one place.</p>
+    <a href="#tickets" class="btn">Get Free Entry Pass</a>
   </section>
 
-  <!-- Featured Food Stalls -->
-  <section id="vendors" class="section">
-    <h2>Featured Food Stalls</h2>
+  <!-- Featured Vendors -->
+  <section id="vendors" class="container">
+    <h2 class="section-title">Featured Food Stalls</h2>
     <div class="grid">
       <div class="card">
-        <h3>Smoky BBQ Pit</h3>
-        <p>Slow-cooked brisket, ribs, and homemade cornbread served hot off the grill.</p>
+        <div class="card-body">
+          <span class="tag">BBQ & Grill</span>
+          <h3>Smoky Joe's Brisket</h3>
+          <p>Slow-cooked 14-hour smoked brisket sandwiches, loaded mac & cheese, and homemade spicy bourbon sauce.</p>
+        </div>
       </div>
+
       <div class="card">
-        <h3>Taco Fiesta</h3>
-        <p>Authentic street tacos with fresh salsa, guacamole, and hand-pressed tortillas.</p>
+        <div class="card-body">
+          <span class="tag">Street Tacos</span>
+          <h3>El Camino Taco Truck</h3>
+          <p>Authentic handmade corn tortillas topped with al pastor, fresh pineapple salsa, and cilantro.</p>
+        </div>
       </div>
+
       <div class="card">
-        <h3>Sweet Churro Bar</h3>
-        <p>Crispy cinnamon churros dipped in warm Belgian chocolate and caramel.</p>
+        <div class="card-body">
+          <span class="tag">Desserts</span>
+          <h3>Sugar Rush Churros</h3>
+          <p>Crispy cinnamon-sugar churros served warm with rich dark chocolate and salted caramel dipping sauces.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Schedule Section -->
-  <section id="schedule" class="section bg-light">
-    <h2>Event Schedule</h2>
-    <div class="schedule-list">
-      <div class="schedule-item">
-        <strong>11:00 AM</strong> — Gates Open & Brunch Stalls
-      </div>
-      <div class="schedule-item">
-        <strong>02:00 PM</strong> — Live Acoustic Music & Chef Demo
-      </div>
-      <div class="schedule-item">
-        <strong>06:00 PM</strong> — Night Market & Street Food Awards
-      </div>
+  <!-- Event Details -->
+  <section id="details" class="info-banner">
+    <h2>When & Where</h2>
+    <div class="info-details">
+      <div>📅 <strong>Date:</strong> August 15–17, 2026</div>
+      <div>⏰ <strong>Time:</strong> 11:00 AM – 10:00 PM</div>
+      <div>📍 <strong>Location:</strong> Central Waterfront Park</div>
     </div>
   </section>
 
-  <!-- Ticket Registration -->
-  <section id="tickets" class="section">
-    <h2>Register for Entry</h2>
-    <form class="ticket-form">
-      <input type="text" placeholder="Your Full Name" required>
-      <input type="email" placeholder="Email Address" required>
-      <select>
-        <option value="general">General Admission (Free)</option>
-        <option value="vip">VIP Tasting Pass ($25)</option>
-      </select>
-      <button type="submit" class="btn-primary">Claim Pass</button>
-    </form>
+  <!-- Ticket CTA -->
+  <section id="tickets" class="container" style="text-align: center;">
+    <h2 class="section-title">Join the Feast</h2>
+    <p style="margin-bottom: 25px;">General admission is free! VIP tasting passes are available at the gate.</p>
+    <a href="#" class="btn">Register Now</a>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2026 TasteFest Food Festival. All rights reserved.</p>
+    <p>© 2026 Taste Fest. All rights reserved.</p>
   </footer>
 
 </body>
