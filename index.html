@@ -1,15 +1,88 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Jenkins AWS Project</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 80px; background-color: #f0f4f8; }
-        h1 { color: #2b6cb0; }
-        p { font-size: 18px; color: #333; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TasteFest 2026 - Street Food Festival</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello from Jenkins + AWS!</h1>
-    <p>Version 2.0 - Deployed automatically via CI/CD.</p>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="logo">TasteFest</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#vendors">Food Stalls</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#tickets" class="btn-small">Get Tickets</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>City Street Food Festival</h1>
+      <p>Over 40 local food trucks, live music, and craft drinks. November 28–29 at Central Park.</p>
+      <a href="#tickets" class="btn-primary">Reserve Free Entry</a>
+    </div>
+  </section>
+
+  <!-- Featured Food Stalls -->
+  <section id="vendors" class="section">
+    <h2>Featured Food Stalls</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Smoky BBQ Pit</h3>
+        <p>Slow-cooked brisket, ribs, and homemade cornbread served hot off the grill.</p>
+      </div>
+      <div class="card">
+        <h3>Taco Fiesta</h3>
+        <p>Authentic street tacos with fresh salsa, guacamole, and hand-pressed tortillas.</p>
+      </div>
+      <div class="card">
+        <h3>Sweet Churro Bar</h3>
+        <p>Crispy cinnamon churros dipped in warm Belgian chocolate and caramel.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule Section -->
+  <section id="schedule" class="section bg-light">
+    <h2>Event Schedule</h2>
+    <div class="schedule-list">
+      <div class="schedule-item">
+        <strong>11:00 AM</strong> — Gates Open & Brunch Stalls
+      </div>
+      <div class="schedule-item">
+        <strong>02:00 PM</strong> — Live Acoustic Music & Chef Demo
+      </div>
+      <div class="schedule-item">
+        <strong>06:00 PM</strong> — Night Market & Street Food Awards
+      </div>
+    </div>
+  </section>
+
+  <!-- Ticket Registration -->
+  <section id="tickets" class="section">
+    <h2>Register for Entry</h2>
+    <form class="ticket-form">
+      <input type="text" placeholder="Your Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <select>
+        <option value="general">General Admission (Free)</option>
+        <option value="vip">VIP Tasting Pass ($25)</option>
+      </select>
+      <button type="submit" class="btn-primary">Claim Pass</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 TasteFest Food Festival. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
